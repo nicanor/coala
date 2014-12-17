@@ -1,0 +1,54 @@
+<header class="asd">
+  <h1><%= t :diffusion %></h1>
+</header>
+
+<div class="row">
+  <div class="col-md-5">
+    <article class="adio">
+      <%= image_tag 'diffusion.jpg', class: 'img-responsive thumbnail' %>
+    </article>
+
+<h2>Empezá a activar ya mismo!</h2>
+<p>Imprimí los folletos que usa <abbr title="Colectivo Abolicionista por la Liberación Animal">COALA</abbr>. Tamaño de hoja A4.</p>
+
+<%= link_to image_url('BNfront.jpg'), class: 'download btn btn-success', target: '_blank' do %>
+  <span class="first" ><%= icon 'file-text-o fa-2x' %></span>
+  <span class="second"><%= icon 'file-text fa-2x' %></span>
+  Frente
+<% end %>
+
+<%= link_to image_url('BNback.jpg'), class: 'download btn btn-success', target: '_blank' do %>
+  <span class="first" ><%= icon 'file-text-o fa-2x' %></span>
+  <span class="second"><%= icon 'file-text fa-2x' %></span>
+  Dorso
+<% end %>
+
+  </div>
+  <div class="col-md-7">
+    <h4>¿Qué es el veganismo?</h4>
+    <p>La palabra veganismo surge al intentar definir una postura ética, llevada a la práctica y sostenida como forma de vida que busca excluir, en la medida de lo posible y practicable, todas las formas de explotación y crueldad hacia los animales.</p>
+
+    <div class="row well">
+      <div class="col-md-2">
+        <%= icon 'youtube fa-5x' %>
+      </div>
+      <div class="col-md-10">
+        <ul>
+          <li><%= link_to 'Documental Terrícolas (Earthlings)', earthlings_url, target: '_blank' %></li>
+          <li><%= link_to 'El mejor discurso que jamás escucharás', 'https://www.youtube.com/watch?v=ZzvK5uLu7F0',target: '_blank' %></li>
+          <li><%= link_to '101 razones para ser vegano', 'https://www.youtube.com/watch?v=4Tk0fMvwIT4', target: '_blank' %></li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>¿Qué puedo hacer por los animales?</h4>
+    <p>Hacernos veganos es lo más importante que podemos hacer todos ahora mismo por los animales. Si ya sos vegano, te alentamos a difundirlo. <abbr title="Colectivo Abolicionista por la Liberación Animal">COALA</abbr> es un buen lugar para empezar. Somos un grupo abierto y nos encantaría tenerte entre nosotros.</p>
+
+    <h4>Encontranos todos los viernes en la esquina de 7 y 50</h4>
+    <p>Entre las <strong>14:00hs</strong> y las <strong>17:30hs</strong> nos podés encontrar en la esquina de <strong>7 y 50</strong>, difundiendo los derechos animales y el veganismo. Si querés informarte o participar acercate a conocernos!</p>
+  </div>
+</div>
+
+<article class="iconed">
+  <%= link_to icon('angle-down'), '#cuisine', class: 'btn btn-success' %>
+</article>

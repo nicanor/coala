@@ -1,0 +1,41 @@
+<header class="jumbotron">
+  <h1><%= t :advocacy %></h1>
+</header>
+
+<div id="activities" class="row">
+
+  <div class="col-md-4">
+    <article class="well iconed">
+      <header>
+        <%= icon :bullhorn %>
+        <h2><%= link_to t(:diffusion), '#diffusion'%></h2>
+      </header>
+      <p>Todos los viernes de 14 a 17:30 hs nos concentramos en la esquina de 7 y 50 para difundir el veganismo y los derechos de los animales.</p>
+    </article>
+  </div>
+
+  <div class="col-md-4">
+    <article class="well iconed">
+      <header>
+        <%= icon :cutlery %>
+        <h2><%= link_to t(:cuisine), '#cuisine'%></h2>
+      </header>
+      <p>Brindamos talleres para enseñar que la comida vegana es fácil, rica y que está al alcance de todos. Podés anotarte mandando un mail a activismo.coala@gmail.com.</p>
+    </article>
+  </div>
+
+  <div class="col-md-4">
+    <article class="well iconed">
+      <header>
+        <%= icon :microphone %>
+        <h2><%= link_to t(:radio), '#radio'%></h2>
+      </header>
+      <p>Nos podés escuchar todos los viernes de 18 a 20 hs por <strong>Radio Capital La Plata FM 95.5</strong>, en nuestro programa de radio "Abrazo Animal".</p>
+      <p><%= link_to 'Visitanos por Facebook', 'https://www.facebook.com/abrazoanimal95.5' %>.</p>
+    </article>
+  </div>
+</div>
+
+<article class="iconed">
+  <%= link_to icon('angle-down'), '#diffusion', class: 'btn btn-success' %>
+</article>

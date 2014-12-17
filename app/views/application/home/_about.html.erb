@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-md-8">
+    <header><h1><%= t :about %></h1></header>
+
+    <p class="lead">Somos un grupo de activistas de la <strong>Ciudad de La Plata</strong> dedicado a la difusión del <strong>veganismo</strong>.
+    <abbr title="Colectivo Abolicionista por la Liberación Animal">COALA</abbr> nació en Agosto de 2013, y a partir de entonces lucha sin descanso por la liberación animal.</p>
+
+    <p class="lead">Nuestro objetivo es concientizar a las personas sobre la <strong><%= link_to 'grave problemática', earthlings_url, target: '_blank' %></strong> del uso animal y <a href='#diffusion'>lo que podemos hacer</a> al respecto.</p>
+
+    <p class="lead">Además alentamos a aquellos que hayan tomado la decisión de hacerse veganos a involucrarse con la causa. ¡Los animales te necesitan!</p>
+
+  </div>
+  <div class="col-md-4">
+    <%= image_tag 'profile.png', class: 'img-responsive thumbnail' %>
+  </div>
+</div>
+
+<article class="semi-transparent iconed">
+  <%= link_to icon('angle-down'), '#advocacy', class: 'btn btn-success' %>
+</article>

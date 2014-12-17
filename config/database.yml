@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: 123456
+  database: coala
+  host: localhost
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: 123456
+  database: coala-production
+  host: localhost

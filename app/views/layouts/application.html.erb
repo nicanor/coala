@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head><%= render 'head' %></head>
+  <body data-spy="scroll" data-target=".scrollspy">
+    <%= yield %>
+
+    <footer id="footer" class="home-section">
+      <div class="container"><p><%= t :brand_explanation %> - <%= Date.today.year %></p></div>
+    </footer>
+  </body>
+</html>

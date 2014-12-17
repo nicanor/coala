@@ -1,0 +1,167 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require font-awesome
+ *= require sandstone
+ *= require side-scrolling
+ *= require_self
+ */
+
+h1, h2, h3, h4, h5 {
+  text-transform: uppercase;
+  font-family: Impact, Charcoal, sans-serif;
+
+  a:hover { text-decoration: none;}
+}
+
+#navbar {
+  .navbar-brand {
+    font-size: 2em;
+    font-family: Impact, Charcoal, sans-serif;
+    text-transform: uppercase;
+  }
+  border-radius: 0px;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+
+  a.social {
+    line-height: 1em;
+  }
+}
+
+.home-section {
+  & > div{
+    padding-top:    100px;
+    padding-bottom: 80px;
+  }
+  background-repeat: repeat;
+  background-position: left top;
+  header { padding-bottom: 1em;}
+}
+
+.important { font-size: 1.2em;}
+
+section#cover {
+  padding-top:60px;
+  padding-bottom: 0px;
+
+  img { margin: 0 auto; }
+  background-color: #bfcb75;//#93c54b;//#bfcb75;
+}
+
+section#about {
+  //background-image: url('pattern.png');
+  background:
+linear-gradient(135deg, #f8f8f8 25%, transparent 25%) -100px 0,
+linear-gradient(225deg, #f8f8f8 25%, transparent 25%) -100px 0,
+linear-gradient(315deg, #f8f8f8 25%, transparent 25%),
+linear-gradient(45deg , #f8f8f8 25%, transparent 25%); 
+background-size: 200px 200px;
+background-color: #ffffff;
+  p.lead {
+    font-size: 1.4em;
+  }
+}
+
+section#advocacy {
+  background: 
+linear-gradient(135deg, #15592e 25%, transparent 25%) -100px 0,
+linear-gradient(225deg, #15592e 25%, transparent 25%) -100px 0,
+linear-gradient(315deg, #15592e 25%, transparent 25%),
+linear-gradient(45deg , #15592e 25%, transparent 25%); 
+background-size: 200px 200px;
+background-color: #186030;
+  //background-color: #15592e;
+  text-align: center;
+  .jumbotron {
+    padding-top: 10px;
+    background: transparent;
+    color: #fff;
+  }
+  .well {
+    background-color: rgba(0,0,0,0.3);
+    height: 340px;
+    color: white;
+  }
+
+}
+
+section#diffusion {
+  //background-image: url('pattern.png');
+  background-color: #fff;
+background-image:
+linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+linear-gradient(#eee .1em, transparent .1em);
+background-size: 100% 1.2em;
+  .download {
+    .second { display: none;}
+  }
+  .download:hover{
+    .first  { display: none;}
+    .second { display: inline;}
+  }
+}
+
+section#radio {
+  //background-image: url('pattern.png');
+  background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+  background-color:#282828;
+  background-size:16px 16px;
+  color: #eee;
+  .thumbnail {color: #333;}
+}
+
+section#cuisine {
+  background-color:white;
+  background-image: linear-gradient(90deg, rgba(200,0,0,.5) 50%, transparent 50%), linear-gradient(rgba(200,0,0,.5) 50%, transparent 50%);
+  background-size:50px 50px;
+  font-size: 1.2em;
+  div.transparent {
+    padding: 1em;
+    background-color: rgba(255,255,255,0.8);
+  }
+}
+
+article.radio {
+  text-align:center;
+  font-size: 16em; // For big microphone icon.
+  line-height: 1em;
+}
+
+footer#footer {
+  div.container {
+    padding-bottom:2em;
+    padding-top: 2em;
+  }
+  padding-top:2em;
+  padding-bottom:0em;
+  background-color: #333;
+  color: #fff;
+}
+
+article.iconed {
+  text-align: center;
+  i {
+    font-size: 8em; 
+    line-height: 1em;
+  }
+  a {padding-top:0px; padding-bottom: 0px;}
+}
+
+article.semi-transparent a{
+  background-color: rgba(0,0,0,0.4);
+}

@@ -1,0 +1,12 @@
+<%= content_tag :title, t(:tag_title) %>
+<%= stylesheet_link_tag "application", media: :all %>
+<%= javascript_include_tag "application" %>
+<%= favicon_link_tag %>
+<%= csrf_meta_tags %>
+
+<%= tag :meta, charset: "UTF-8" %>
+<%= tag :meta, name: :author, content: "Nicanor Perera" %>
+<%= tag :meta, name: :language, content: I18n.locale %>
+<%= tag :meta, lang: I18n.locale, name: :description, content: 'Somos un grupo de activistas de la Ciudad de La Plata dedicado a la difusión del veganismo. COALA nació en Agosto de 2013, y a partir de entonces lucha sin descanso por la liberación animal.' %>
+
+<%= render 'analytics' %>

@@ -1,0 +1,22 @@
+<section id="nav" >
+  <%= render 'navbar' %>
+</section>
+
+<section id="top"></section>
+
+<%= section 'cover' %>
+<%= section 'about' %>
+<%= section 'advocacy' %>
+<%= section 'diffusion' %>
+<%= section 'cuisine' %>
+<%= section 'radio' %>
+
+<span class="nav-scroll scrollspy hidden-sm hidden-xs">
+  <ul class="nav list-unstyled">
+    <% [:cover, :about, :advocacy, :diffusion, :cuisine, :radio].each do |section| %>
+      <li><%= link_to icon(:circle), "##{section}", title: t(section) %></li>
+    <% end %>
+  </ul>
+</span>
+
+<span class="totop"><a href="#top"><i class="fa fa-angle-up"></i></a></span>

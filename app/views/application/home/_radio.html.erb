@@ -1,0 +1,24 @@
+<header><h1><%= t :radio %></h1></header>
+
+<div class="row">
+  <div class="col-md-5">
+    <article class="radio">
+      <%= icon('microphone thumbnail') %>
+    </article>
+  </div>
+  <div class="col-md-7">
+
+    <p class="lead">Un espacio que generamos para debatir y compartir diferentes enfoques y miradas sobre temas que no suelen ser del conocimiento general</p>
+
+    <p class="lead">La música que te gusta todos los viernes de <strong>18:00</strong> a <strong>20:00</strong> hs por <strong>Radio Capital FM 95.5</strong> La Plata - Buenos Aires</p>
+
+
+    <p class="lead">Seguinos por <%= link_to 'nuestra página de facebook', 'https://www.facebook.com/abrazoanimal95.5', target: '_blank' %>.</p>
+    
+    <p class="lead">Si no sos de La Plata, podés <%= link_to 'escucharnos online', 'http://www.radiocapitallaplata.com.ar/', target: '_blank' %> todos los viernes entre las 18 y las 20 horas.</p>
+  </div>
+</div>
+
+<article class="iconed">
+  <%= link_to icon('angle-double-up'), '#top', class: 'btn btn-default' %>
+</article>

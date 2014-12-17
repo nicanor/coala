@@ -1,0 +1,34 @@
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top scrollspy" role="navigation">
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to t(:brand), '#cover', class: 'navbar-brand hidden-sm hidden-xs' %>
+    </div>
+
+    <nav id="navbar-collapse" class="collapse navbar-collapse" role="navigation">
+      
+      <ul class="nav navbar-nav">
+        <li><%= link_to     t(:about), '#about' %></li>
+        <li><%= link_to  t(:advocacy), '#advocacy' %></li>
+        <li><%= link_to t(:diffusion), '#diffusion' %></li>
+        <li><%= link_to   t(:cuisine), '#cuisine' %></li>
+        <li><%= link_to     t(:radio), '#radio' %></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <%= link_to facebook_url, target: '_blank', class: 'social' do %>
+            <%= icon 'facebook-square fa-2x' %> <%= content_tag :span, t(:visit_facebook), class: 'hidden-sm hidden-xs' %>
+          <% end %>
+        </li>
+      </ul>
+
+    </nav><!-- /.navbar-collapse -->
+  </div><!-- /.container -->
+</nav>

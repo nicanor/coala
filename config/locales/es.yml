@@ -11,3 +11,11 @@ es:
   radio: 'Abrazo Animal'
 
   visit_facebook: 'Visitanos en facebook'
+
+  workshops: 'Taller'
+
+  new:
+    workshop: 'Nuevo Taller'
+
+  edit:
+    workshop: 'Editar Taller'

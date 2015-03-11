@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head><%= render 'head' %></head>
+  <body>
+    <section id="nav" >
+      <%= render 'navbar' %>
+    </section>
+
+    <section class="container">
+      <%= yield %>
+    </section>
+
+    <footer id="footer" class="home-section">
+      <div class="container"><p><%= t :brand_explanation %> - <%= Date.today.year %></p></div>
+    </footer>
+  </body>
+</html>

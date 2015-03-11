@@ -1,0 +1,30 @@
+<%= form_for [:admin, @workshop] do |f| %>
+
+  <article class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </article>
+
+  <article class="form-group">
+    <%= f.label :start_date %>
+    <%= f.date_field :start_date, class: 'form-control' %>
+  </article>
+
+  <article class="form-group">
+    <%= f.label :start_time %>
+    <%= f.time_field :start_time, class: 'form-control' %>
+  </article>
+
+  <article class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: 'form-control' %>
+  </article>
+
+  <article class="form-group">
+    <%= f.label :state %>
+    <%= f.text_field :state, class: 'form-control' %>
+  </article>
+
+  <%= submit_tag :submit, class: 'btn btn-primary' %>
+
+<% end %>

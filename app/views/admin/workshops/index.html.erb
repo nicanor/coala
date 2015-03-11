@@ -1,0 +1,7 @@
+<h1><%= t :workshops %></h1>
+
+<%= link_to t(:workshop, scope: :new), [:new, :admin, :workshop] %>
+
+<section class="workshops list-group">
+  <%= render @workshops %>
+</section>

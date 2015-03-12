@@ -1,0 +1,11 @@
+es:
+  activerecord:
+    models:
+      workshop: 'Taller'
+    attributes:
+      workshop:
+        title: 'Titulo'
+        start_date: 'Día'
+        start_time: 'Hora'
+        description: 'Descripción'
+        state: 'Estado'

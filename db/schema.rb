@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20150311210612) do
 
   create_table "workshops", force: true do |t|
     t.string   "title"
-    t.string   "state"
+    t.integer  "state",       default: 0
     t.date     "start_date"
     t.time     "start_time"
     t.text     "description"

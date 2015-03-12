@@ -7,11 +7,14 @@
     </section>
 
     <section class="container">
-      <%= yield %>
+      <div class="row">
+        <aside class="col-md-2">
+          <%= render 'aside' %>
+        </aside>
+        <section class="content col-md-10">
+          <%= yield %>
+        </section>
     </section>
 
-    <footer id="footer" class="home-section">
-      <div class="container"><p><%= t :brand_explanation %> - <%= Date.today.year %></p></div>
-    </footer>
   </body>
 </html>

@@ -1,6 +1,8 @@
-<h1><%= t :workshops %></h1>
+<h1>
+  <%= link_to t(:workshop, scope: :new), [:new, :admin, :workshop], class: 'pull-right btn btn-primary' %>
+  <%= t :workshops %>
+</h1>
 
-<%= link_to t(:workshop, scope: :new), [:new, :admin, :workshop] %>
 
 <section class="workshops list-group">
   <%= render @workshops %>

@@ -3,6 +3,20 @@ es:
   brand: 'COALA'
   brand_explanation: 'Colectivo Abolicionista por la Liberación Animal'
 
+  submit: 'Guardar'
+
+  workshops: 'Talleres de cocina'
+
+  new:
+    workshop: 'Nuevo Taller'
+
+  edit:
+    workshop: 'Editar Taller'
+
+  draft: 'Borrador'
+  open: 'Abierto'
+  closed: 'Cerrado'
+
   cover:    'Coala'
   about:    '¿Quienes somos?'
   advocacy: 'Activismo'
@@ -11,11 +25,3 @@ es:
   radio: 'Abrazo Animal'
 
   visit_facebook: 'Visitanos en facebook'
-
-  workshops: 'Taller'
-
-  new:
-    workshop: 'Nuevo Taller'
-
-  edit:
-    workshop: 'Editar Taller'

@@ -5,15 +5,21 @@
     <%= f.text_field :title, class: 'form-control' %>
   </article>
 
-  <article class="form-group">
-    <%= f.label :start_date %>
-    <%= f.date_field :start_date, class: 'form-control' %>
-  </article>
+  <div class="row">
+    <div class="col-md-6">
+      <article class="form-group">
+        <%= f.label :start_date %>
+        <%= f.date_field :start_date, class: 'form-control' %>
+      </article>
+    </div>
 
-  <article class="form-group">
-    <%= f.label :start_time %>
-    <%= f.time_field :start_time, class: 'form-control' %>
-  </article>
+    <div class="col-md-6">
+      <article class="form-group">
+        <%= f.label :start_time %>
+        <%= f.time_field :start_time, class: 'form-control' %>
+      </article>
+    </div>
+  </div>
 
   <article class="form-group">
     <%= f.label :description %>
@@ -22,9 +28,11 @@
 
   <article class="form-group">
     <%= f.label :state %>
-    <%= f.text_field :state, class: 'form-control' %>
+    <%= f.select :state, options_for_select(Workshop.states.map {|k,v| [t(k),k]}), {}, {class: 'form-control'} %>
   </article>
 
-  <%= submit_tag :submit, class: 'btn btn-primary' %>
+  <article class="form-group">
+    <%= submit_tag t(:submit), class: 'btn btn-primary' %>
+  </article>
 
 <% end %>

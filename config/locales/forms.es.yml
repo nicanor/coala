@@ -2,10 +2,15 @@ es:
   activerecord:
     models:
       workshop: 'Taller'
+      contact:  'Contacto'
     attributes:
+      contact:
+        mail:       'Correo'
+        first_name: 'Nombre'
+        last_name:  'Apellido'
       workshop:
-        title: 'Titulo'
-        start_date: 'Día'
-        start_time: 'Hora'
+        title:       'Titulo'
+        start_date:  'Día'
+        start_time:  'Hora'
         description: 'Descripción'
-        state: 'Estado'
+        state:       'Estado'

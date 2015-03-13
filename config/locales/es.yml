@@ -6,12 +6,15 @@ es:
   submit: 'Guardar'
 
   workshops: 'Talleres de cocina'
+  contacts: 'Contactos'
 
   new:
     workshop: 'Nuevo Taller'
+    contact: 'Agregar contacto'
 
   edit:
     workshop: 'Editar Taller'
+    contact: 'Editar contacto'
 
   draft: 'Borrador'
   open: 'Abierto'

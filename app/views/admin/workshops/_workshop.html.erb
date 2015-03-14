@@ -1,1 +1,5 @@
-<%= link_to workshop.title, [:edit, :admin, workshop], class: 'list-group-item' %>
+<%= link_to [:edit, :admin, workshop], class: 'list-group-item' do %>
+  <span class="label label-primary"><%= workshop.id %></span>
+  <%= workshop.title %>
+  <p class="small-note"><%=  workshop.created_at %></p>
+<% end %>

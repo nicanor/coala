@@ -1,0 +1,32 @@
+$add-icon:          "\f067"; // :plus
+$delete-icon:       "\f1f8"; // :trash
+$home-icon:         "\f015"; // :home
+$login-icon:        "\f090"; // :sign-in
+$logout-icon:       "\f08b"; // :sign-out
+$workshop-icon:     "\f0f5"; // :cutlery
+$contact-icon:      "\f007"; // :user
+
+.btn-add,
+.btn-delete,
+.home-link,
+.login-link,
+.logout-link,
+.workshop-link,
+.contact-link,
+#workshops > .list-group-item,
+#contacts  > .list-group-item {
+  font-family: FontAwesome;
+  &:before { padding-right: 0.5em; }
+}
+
+#contacts, #workshop {
+  & > .list-group-item:before { color: #999; }
+}
+
+.btn-add:before     { content: $add-icon; }
+.btn-delete:before  { content: $delete-icon;}
+.home-link:before   { content: $home-icon; }
+.login-link:before  { content: $login-icon; }
+.logout-link:before { content: $logout-icon; }
+a.workshop-link:before, #workshops > .list-group-item:before { content: $workshop-icon; }
+a.contact-link:before , #contacts  > .list-group-item:before { content: $contact-icon; }

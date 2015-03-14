@@ -1,8 +1,8 @@
 <h1>
-  <%= link_to t(:contact, scope: :new), [:new, :admin, :contact], class: 'pull-right btn btn-primary' %>
+  <%= link_to t(:contact, scope: :new), [:new, :admin, :contact], class: 'pull-right btn btn-primary btn-add' %>
   <%= t :contacts %>
 </h1>
 
-<section class="contacts list-groups">
+<section id="contacts">
   <%= render @contacts %>
 </section>

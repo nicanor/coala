@@ -1,28 +1,20 @@
 module ApplicationHelper
 
-  def flash_message_tag(type, message)
-    flash.discard(type)
-    content_tag :div, class: [:alert, "alert-#{type}"] do
-      concat link_to("&times;".html_safe, "", class: :close, data: { dismiss: :alert })
-      concat message
-    end
+  def flash_message(klass, message)
+    klass = 'success' if klass == 'notice' || klass == 'alert'
+    flash.discard(klass)
+    content_tag :span, nil, class: "flash-alert flash-alert-#{klass}", data: {toggle: :snackbar, content: message}
   end
 
   def flash_messages
-    capture do
-      flash.map { |type, msj| concat flash_message_tag(type, msj) }
-    end
+    flash.map do |type, message|
+      flash_message(type, message)
+    end.join.html_safe
   end
 
-  def icon(name)
-    content_tag :i, nil, class: "fa fa-#{name}"
-  end
-
-  def custom_form_for(object, *args, &block)
-    options = args.extract_options!
-    options[:wrapper] = :bootstrap3
-    options[:defaults] = {input_html: {class: :'form-control'}}
-    simple_form_for(object, *(args << options), &block)
+  def icon(name, html_options={})
+    html_options[:class] = ['fa', "fa-#{name}", html_options[:class]].compact
+    content_tag(:i, nil, html_options)
   end
 
   def facebook_url

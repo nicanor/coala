@@ -27,7 +27,7 @@
   </article>
 
   <article class="form-group">
-    <%= f.label :state %>
+    <%= f.label :state, class: 'control-label' %>
     <%= f.select :state, options_for_select(Workshop.states.map {|k,v| [t(k),k]}), {}, {class: 'form-control'} %>
   </article>
 

@@ -1,11 +1,12 @@
 es:
   tag_title: 'COALA - Activismo Vegano'
   brand: 'COALA'
+  admin: 'Intra Coala'
   brand_explanation: 'Colectivo Abolicionista por la Liberación Animal'
 
   submit: 'Guardar'
 
-  workshops: 'Talleres de cocina'
+  workshops: 'Talleres'
   contacts: 'Contactos'
 
   new:

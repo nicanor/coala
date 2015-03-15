@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150312231106) do
+ActiveRecord::Schema.define(version: 20150315135738) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "contacts", force: true do |t|
+  create_table "contacts", force: :cascade do |t|
     t.string   "email"
     t.string   "first_name"
     t.string   "last_name"
@@ -26,16 +26,8 @@ ActiveRecord::Schema.define(version: 20150312231106) do
 
   add_index "contacts", ["email"], name: "index_contacts_on_email", unique: true, using: :btree
 
-  create_table "contacts_workshops", id: false, force: true do |t|
-    t.integer "workshop_id"
-    t.integer "contact_id"
-  end
-
-  add_index "contacts_workshops", ["contact_id"], name: "index_contacts_workshops_on_contact_id", using: :btree
-  add_index "contacts_workshops", ["workshop_id"], name: "index_contacts_workshops_on_workshop_id", using: :btree
-
-  create_table "workshops", force: true do |t|
-    t.string   "title"
+  create_table "events", force: :cascade do |t|
+    t.string   "name"
     t.integer  "state",       default: 0
     t.date     "start_date"
     t.time     "start_time"
@@ -44,4 +36,17 @@ ActiveRecord::Schema.define(version: 20150312231106) do
     t.datetime "updated_at"
   end
 
+  create_table "participations", force: :cascade do |t|
+    t.integer  "person_id"
+    t.string   "person_type"
+    t.integer  "event_id"
+    t.string   "role"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "participations", ["event_id"], name: "index_participations_on_event_id", using: :btree
+  add_index "participations", ["person_type", "person_id"], name: "index_participations_on_person_type_and_person_id", using: :btree
+
+  add_foreign_key "participations", "events"
 end

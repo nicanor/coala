@@ -1,5 +1,6 @@
 class Contact < ActiveRecord::Base
 
-  has_and_belongs_to_many :workshops
+  has_many :participations, as: :person
+  has_many :events, through: :participation
   validates :email, presence: true
 end

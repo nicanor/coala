@@ -1,8 +1,8 @@
-<%= form_for [:admin, @workshop] do |f| %>
+<%= form_for [:admin, @event] do |f| %>
 
   <article class="form-group">
-    <%= f.label :title %>
-    <%= f.text_field :title, class: 'form-control' %>
+    <%= f.label :name %>
+    <%= f.text_field :name, autofocus: true, class: 'form-control' %>
   </article>
 
   <div class="row">
@@ -28,7 +28,7 @@
 
   <article class="form-group">
     <%= f.label :state, class: 'control-label' %>
-    <%= f.select :state, options_for_select(Workshop.states.map {|k,v| [t(k),k]}), {}, {class: 'form-control'} %>
+    <%= f.select :state, options_for_select(Event.states.map {|k,v| [t(k),k]}), {}, {class: 'form-control'} %>
   </article>
 
   <article class="form-group">

@@ -1,0 +1,8 @@
+<h1>
+  <%= link_to t(:event, scope: :new), [:new, :admin, :event], class: 'pull-right btn btn-primary btn-add' %>
+  <%= t :events %>
+</h1>
+
+<section id="events">
+  <%= render @events %>
+</section>

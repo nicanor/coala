@@ -6,15 +6,15 @@ es:
 
   submit: 'Guardar'
 
-  workshops: 'Talleres'
+  events: 'Eventos'
   contacts: 'Contactos'
 
   new:
-    workshop: 'Nuevo Taller'
+    event: 'Nuevo Evento'
     contact: 'Agregar contacto'
 
   edit:
-    workshop: 'Editar Taller'
+    event: 'Editar Evento'
     contact: 'Editar contacto'
 
   draft: 'Borrador'

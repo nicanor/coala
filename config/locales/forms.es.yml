@@ -1,16 +1,19 @@
 es:
   activerecord:
     models:
-      workshop: 'Taller'
+      event: 'Taller'
       contact:  'Contacto'
     attributes:
       contact:
         mail:       'Correo'
         first_name: 'Nombre'
         last_name:  'Apellido'
-      workshop:
-        title:       'Titulo'
+      event:
+        name:       'Nombre'
         start_date:  'Día'
         start_time:  'Hora'
         description: 'Descripción'
         state:       'Estado'
+  errors:
+    messages:
+      blank: 'No puede estar en blanco'

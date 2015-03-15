@@ -1,7 +1,7 @@
-class CreateWorkshops < ActiveRecord::Migration
+class CreateEvents < ActiveRecord::Migration
   def change
-    create_table :workshops do |t|
-      t.string :title
+    create_table :events do |t|
+      t.string :name
       t.integer :state, default: 0
       t.date :start_date
       t.time :start_time

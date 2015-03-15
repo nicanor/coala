@@ -1,5 +1,6 @@
 es:
   tag_title: 'COALA - Activismo Vegano'
+  home: 'Inicio'
   brand: 'COALA'
   admin: 'Intra Coala'
   brand_explanation: 'Colectivo Abolicionista por la Liberación Animal'
@@ -16,6 +17,8 @@ es:
   edit:
     event: 'Editar Evento'
     contact: 'Editar contacto'
+
+  subscription_to: "Inscripción al %{event}"
 
   draft: 'Borrador'
   open: 'Abierto'

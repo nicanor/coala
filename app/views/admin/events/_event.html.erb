@@ -1,5 +1,5 @@
 <%= link_to [:edit, :admin, event], class: 'list-group-item' do %>
   <span class="label label-primary"><%= event.id %></span>
-  <%= event.title %>
+  <%= event.name %>
   <p class="small-note"><%=  event.created_at %></p>
 <% end %>

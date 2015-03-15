@@ -1,7 +1,7 @@
 class SubscriptionController < ApplicationController
 
   def subscribe
-    @event = Event.find params[:event_id]
+    @event = Event.find_by slug: params[:event_id]
     @form = SubscriptionForm.new(event_id: @event.id)
   end
 

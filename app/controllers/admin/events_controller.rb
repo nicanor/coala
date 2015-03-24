@@ -19,10 +19,10 @@ class Admin::EventsController < Admin::AdminController
   def create
     @event = Event.new(event_params)
     if @event.save
-      flash[:success] = "YEAH"
+      flash[:success] = t(:created)
       redirect_to [:admin, :events]
     else
-      flash[:danger] = 'Buuuu'
+      flash[:danger] = t(:failed)
       render 'new'
     end
   end
@@ -30,10 +30,10 @@ class Admin::EventsController < Admin::AdminController
   def update
     @event = Event.find params[:id]
     if @event.update(event_params)
-      flash[:success] = "YEAH"
+      flash[:success] =  t(:updated)
       redirect_to [:admin, :events]
     else
-      flash[:danger] = 'Buuuu'
+      flash[:danger] =  t(:failed)
       render 'edit'
     end
   end

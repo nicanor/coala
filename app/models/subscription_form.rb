@@ -11,7 +11,7 @@ class SubscriptionForm
       new_contact.last_name  = last_name
     end
 
-    contact.participations.create(event_id: event_id, role: :guest)
+    event.subscriptions.create(contact_id: contact.id)
   end
 
 end

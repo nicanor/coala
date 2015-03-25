@@ -3,6 +3,7 @@ class CreateSubscriptions < ActiveRecord::Migration
     create_table :subscriptions do |t|
       t.references :contact, index: true
       t.references :event, index: true
+      t.boolean :assistance, default: false
 
       t.timestamps null: false
     end

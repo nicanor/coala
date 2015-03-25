@@ -3,9 +3,10 @@ es:
     models:
       event: 'Taller'
       contact:  'Contacto'
+      subscription_form: 'Formulario de Inscripción'
     attributes:
       contact:
-        mail:       'Correo'
+        email:      'Correo electrónico'
         first_name: 'Nombre'
         last_name:  'Apellido'
       event:
@@ -14,6 +15,14 @@ es:
         start_time:  'Hora'
         description: 'Descripción'
         state:       'Estado'
+
+  activemodel:
+    attributes:
+      subscription_form:
+        email: 'Correo electrónico'
+        first_name: 'Nombre'
+        last_name: 'Apellido'
+
   errors:
     messages:
       blank: 'No puede estar en blanco'

@@ -14,6 +14,18 @@
 
     <dt><%= t :created_at %></dt>
     <dd><%= l @contact.created_at %></dd>
+
+    <dt><%= t :subscriptions %></dt>
+    <dd>
+      <ul>
+      <% @contact.subscriptions.each do |subscription| %>
+        <li>
+          <%= subscription.event.name %>
+          <%= subscription.assistance ? icon(:check, class: 'text-success') : icon(:times, class: 'text-danger') %>
+        </li>
+      <% end %>
+      </ul>
+    </dd>
   </dl>
 
   <%= link_to t(:contact, scope: :edit), [:edit, :admin, @contact], class: 'btn btn-edit btn-primary' %>

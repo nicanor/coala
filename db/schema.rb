@@ -51,8 +51,9 @@ ActiveRecord::Schema.define(version: 20150325135738) do
   create_table "subscriptions", force: :cascade do |t|
     t.integer  "contact_id"
     t.integer  "event_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "assistance", default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   add_index "subscriptions", ["contact_id"], name: "index_subscriptions_on_contact_id", using: :btree

@@ -7,6 +7,11 @@ Rails.application.routes.draw do
   end
 
   get '/inscripcion/:event_id', to: 'subscription#subscribe', as: :subscription
-  post '/subscription/submit', to: 'subscription#submit', as: :submit_subscription
+  resources :subscription, except: :all do
+    post :submit, on: :collection
+    post :toggle_assistance, on: :member
+  end
+  #post '/subscription/submit', to: 'subscription#submit', as: :submit_subscription
+  get 'success', to: 'application#success', as: :success
   root 'application#home'
 end

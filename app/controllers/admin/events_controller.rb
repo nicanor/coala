@@ -20,7 +20,7 @@ class Admin::EventsController < Admin::AdminController
     @event = Event.new(event_params)
     if @event.save
       flash[:success] = t(:created)
-      redirect_to [:admin, :events]
+      redirect_to [:admin, @event]
     else
       flash[:danger] = t(:failed)
       render 'new'
@@ -31,7 +31,7 @@ class Admin::EventsController < Admin::AdminController
     @event = Event.find params[:id]
     if @event.update(event_params)
       flash[:success] =  t(:updated)
-      redirect_to [:admin, :events]
+      redirect_to [:admin, @event]
     else
       flash[:danger] =  t(:failed)
       render 'edit'

@@ -11,7 +11,8 @@ class SubscriptionForm
       new_contact.last_name  = last_name
     end
 
-    event.subscriptions.create(contact_id: contact.id)
+    subscription = contact.subscriptions.create(event_id: event_id)
+    subscription.persisted?
   end
 
 end

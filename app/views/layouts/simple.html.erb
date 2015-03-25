@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head><%= render 'admin/admin/head' %></head>
+  <body>
+    <div id="main" class="container-fluid">
+      <%= yield %>
+    </div>
+    <%= flash_messages if flash %>
+  </body>
+</html>

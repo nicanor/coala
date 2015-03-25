@@ -14,11 +14,15 @@ es:
   failed:  'Acción fallida'
   back:    'Volver'
 
+  subscription_failed: 'Ya está inscripto a este taller.'
+
   contact: 'Contacto'
+  event: 'Evento'
 
   events: 'Eventos'
   contacts: 'Contactos'
-  subscriptions: 'Inscripciones a eventos'
+  subscriptions: 'Inscripciones'
+  subscriptions_to_events: 'Inscripciones a eventos'
 
   new:
     event: 'Nuevo Evento'
@@ -34,6 +38,10 @@ es:
   first_name: 'Nombre'
   last_name: 'Apellido'
   created_at: 'Agregado el día'
+  name: 'Nombre'
+  start_date: 'Día'
+  start_time: 'Horario'
+  description: 'Descripción'
 
   draft: 'Borrador'
   open: 'Abierto'

@@ -1,0 +1,38 @@
+<h1><%= t :event %></h1>
+
+<section class="well">
+
+  <dl>
+    <dt><%= t :name %></dt>
+    <dd><%= @event.name %></dd>
+
+    <dt><%= t :start_date %></dt>
+    <dd><%= l @event.start_date %></dd>
+
+    <dt><%= t :start_time %></dt>
+    <dd><%= l @event.start_time %></dd>
+
+    <dt><%= t :description %></dt>
+    <dd><%= @event.description %></dd>
+
+    <dt><%= t :subscriptions %></dt>
+    <dd>
+      <ul class="list-group">
+      <% @event.subscriptions.each do |subscription| %>
+        <li class="list-group-item">
+          <%= subscription.contact %>
+          <% id = "subscription-#{subscription.id}"%>
+          <%= link_to '',[:toggle_assistance, subscription], method: :post, remote: true, id: id %>
+          <span class="togglebutton" onclick="document.getElementById('<%= id %>').click();">
+            <label><%= tag :input, type: :checkbox, checked: subscription.assistance %></label>
+          </span>
+        </li>
+      <% end %>
+      </ul>
+    </dd>
+  </dl>
+
+  <%= link_to t(:event, scope: :edit), [:edit, :admin, @event], class: 'btn btn-edit btn-primary' %>
+  <%= link_to t(:back), [:admin, :events], class: 'btn btn-back btn-link' %>
+
+</section>

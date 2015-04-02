@@ -2,6 +2,7 @@ class Event < ActiveRecord::Base
 
   MAX_SLUG_LENGTH = 240
   has_many :participations
+  has_many :subscriptions
   enum state: [:draft, :open, :closed]
   validates :name, :state, :start_date, :start_time, presence: true
   before_create :set_slug

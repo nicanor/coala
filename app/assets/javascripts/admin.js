@@ -13,11 +13,21 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap-min
+//= require bootstrap
 //= require bootstrap-material-design
 
 ready = function(){
+
+  $.material.options = {
+    "withRipples": ".btn:not(.btn-link), .card-image, .navbar a:not(.withoutripple), .nav-tabs a:not(.withoutripple), .withripple",
+    "inputElements": "input.form-control, textarea.form-control, select.form-control",
+    "togglebuttonElements": ".togglebutton > label > input[type=checkbox], .togglebuttoned > span",
+    "checkboxElements": ".checkbox > label > input[type=checkbox], .checkboxed",
+    "radioElements": ".radio > label > input[type=radio]"
+  }
+
   $.material.checkbox();
+  $.material.togglebutton();
 
   alerts = $('.flash-alert');
   if (alerts.length ) {

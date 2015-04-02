@@ -12,7 +12,7 @@
 //
 //= require jquery
 // require jquery_ujs
-//= require bootstrap-min
+//= require adequate_bootstrap
 //= require_self
 
 $(document).ready(function(){
@@ -27,7 +27,7 @@ $(document).ready(function(){
   to_top.hide();
 
   $(window).scroll(function(){
-    if ($(this).scrollTop() > 500) {
+    if (($(this).scrollTop() > 500) && ($(this).scrollTop() < 1000)) {
       to_top.fadeIn();
     } else {
       to_top.fadeOut();

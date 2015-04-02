@@ -3,8 +3,9 @@ $delete-icon:       "\f1f8"; // :trash
 $home-icon:         "\f015"; // :home
 $login-icon:        "\f090"; // :sign-in
 $logout-icon:       "\f08b"; // :sign-out
-$event-icon:     "\f0f5"; // :cutlery
-$contact-icon:      "\f007"; // :user
+$event-icon:        "\f0f5"; // :cutlery
+$contact-icon:      "\f0e0"; // :envelope
+$user-icon:         "\f007"; // :user
 
 .btn-add,
 .btn-delete,
@@ -13,13 +14,15 @@ $contact-icon:      "\f007"; // :user
 .logout-link,
 .event-link,
 .contact-link,
-#events > .list-group-item,
-#contacts  > .list-group-item {
+.user-link,
+#events   > .list-group-item,
+#contacts > .list-group-item,
+#users    > .list-group-item {
   font-family: FontAwesome;
   &:before { padding-right: 0.5em; }
 }
 
-#contacts, #event {
+#contacts, #events, #users {
   & > .list-group-item:before { color: #999; }
 }
 

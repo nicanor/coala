@@ -1,1 +1,4 @@
-<%= link_to contact.email, [:edit, :admin, contact], class: 'list-group-item' %>
+<%= link_to [:admin, contact], class: 'list-group-item' do %>
+  <%= contact.last_name %> <%= contact.first_name %>
+  <span class="small-note"><%= contact.email %></span>
+<% end %>

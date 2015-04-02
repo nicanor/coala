@@ -1,0 +1,1 @@
+$('.flash-alert').snackbar('show');

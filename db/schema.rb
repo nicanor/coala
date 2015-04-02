@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150315202614) do
+ActiveRecord::Schema.define(version: 20150325135738) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,26 +28,49 @@ ActiveRecord::Schema.define(version: 20150315202614) do
 
   create_table "events", force: :cascade do |t|
     t.string   "name"
+    t.string   "slug",                    null: false
     t.integer  "state",       default: 0
     t.date     "start_date"
     t.time     "start_time"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "slug",                    null: false
   end
 
   create_table "participations", force: :cascade do |t|
-    t.integer  "person_id"
-    t.string   "person_type"
+    t.integer  "user_id"
     t.integer  "event_id"
     t.string   "role"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_index "participations", ["event_id"], name: "index_participations_on_event_id", using: :btree
-  add_index "participations", ["person_type", "person_id"], name: "index_participations_on_person_type_and_person_id", using: :btree
+  add_index "participations", ["user_id"], name: "index_participations_on_user_id", using: :btree
+
+  create_table "subscriptions", force: :cascade do |t|
+    t.integer  "contact_id"
+    t.integer  "event_id"
+    t.boolean  "assistance", default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  add_index "subscriptions", ["contact_id"], name: "index_subscriptions_on_contact_id", using: :btree
+  add_index "subscriptions", ["event_id"], name: "index_subscriptions_on_event_id", using: :btree
+
+  create_table "users", force: :cascade do |t|
+    t.string   "email"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "role"
+    t.date     "birthdate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   add_foreign_key "participations", "events"
+  add_foreign_key "participations", "users"
+  add_foreign_key "subscriptions", "contacts"
+  add_foreign_key "subscriptions", "events"
 end

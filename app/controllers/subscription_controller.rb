@@ -1,5 +1,7 @@
 class SubscriptionController < ApplicationController
 
+  layout 'simple'
+
   def subscribe
     @event = Event.find_by slug: params[:event_id]
     @form = SubscriptionForm.new(event_id: @event.id)
@@ -7,7 +9,24 @@ class SubscriptionController < ApplicationController
 
   def submit
     @form = SubscriptionForm.new form_params
-    @form.submit
+    if @form.submit
+      redirect_to success_path
+    else
+      @event = Event.find @form.event_id
+      flash[:danger] = t(:subscription_failed)
+      render :subscribe
+    end
+  end
+
+  def toggle_assistance
+    @subscription = Subscription.find(params[:id])
+    @subscription.toggle!(:assistance)
+    flash[:success] = t(:success)
+    render 'show_flash' #nothing: true
+  end
+
+  def success
+    #TODO: Subscriptions in their own folder with success view.
   end
 
   def form_params

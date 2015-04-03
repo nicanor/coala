@@ -1,4 +1,4 @@
-<%= form_for [:admin, @event] do |f| %>
+<%= nested_form_for [:admin, @event] do |f| %>
 
   <article class="form-group">
     <%= f.label :name %>

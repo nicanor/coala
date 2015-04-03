@@ -6,6 +6,7 @@ class Event < ActiveRecord::Base
   enum state: [:draft, :open, :closed]
   validates :name, :state, :start_date, :start_time, presence: true
   before_create :set_slug
+  accepts_nested_attributes_for :subscriptions, allow_destroy: true
 
   protected
     def set_slug

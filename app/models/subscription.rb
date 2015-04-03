@@ -3,5 +3,5 @@ class Subscription < ActiveRecord::Base
   belongs_to :event
 
   validates :contact, :event, presence: true
-  validates :contact, uniqueness: {scope: :event_id}
+  validates :contact, uniqueness: { scope: :event_id }
 end

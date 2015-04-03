@@ -6,19 +6,19 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
-
 gem 'koala'
 gem 'jquery-rails'
 
 gem 'bootstrap-material-design'
 gem 'font-awesome-rails'
 gem 'turbolinks'
+gem 'nested_form'
 
 group :development do
-  gem 'spring' # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
   gem 'thin'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 gem 'capistrano'

@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   namespace :admin do
-    resources :events, path: 'eventos'
+    resources :events, path: 'eventos' do
+      patch :add_subscription
+    end
     resources :contacts, path: 'contactos'
     root 'admin#login'
   end

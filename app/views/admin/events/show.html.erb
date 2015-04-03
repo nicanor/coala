@@ -1,5 +1,8 @@
-<h1><%= t :event %></h1>
-
+<h1>
+  <%= t :event %>
+  <%= link_to t(:back), [:admin, :events], class: 'pull-right btn btn-back btn-link' %>
+  <%= link_to t(:event, scope: :edit), [:edit, :admin, @event], class: 'pull-right btn btn-edit btn-primary' %>
+</h1>
 <section class="well">
 
   <dl>
@@ -18,21 +21,42 @@
     <dt><%= t :subscriptions %></dt>
     <dd>
       <ul class="list-group">
-      <% @event.subscriptions.each do |subscription| %>
-        <li class="list-group-item">
-          <%= subscription.contact %>
-          <% id = "subscription-#{subscription.id}"%>
-          <%= link_to '',[:toggle_assistance, subscription], method: :post, remote: true, id: id %>
-          <span class="togglebutton" onclick="document.getElementById('<%= id %>').click();">
-            <label><%= tag :input, type: :checkbox, checked: subscription.assistance %></label>
-          </span>
-        </li>
-      <% end %>
+        <% @event.subscriptions.each do |subscription| %>
+          <li class="list-group-item">
+            <%= subscription.contact %>
+            <% id = "subscription-#{subscription.id}"%>
+            <%= link_to '',[:toggle_assistance, subscription], method: :post, remote: true, id: id %>
+            <span class="togglebutton" onclick="document.getElementById('<%= id %>').click();">
+              <label><%= tag :input, type: :checkbox, checked: subscription.assistance %></label>
+            </span>
+          </li>
+        <% end %>
       </ul>
     </dd>
+
   </dl>
 
-  <%= link_to t(:event, scope: :edit), [:edit, :admin, @event], class: 'btn btn-edit btn-primary' %>
-  <%= link_to t(:back), [:admin, :events], class: 'btn btn-back btn-link' %>
+  <%= nested_form_for [:admin, @event], url: admin_event_add_subscription_path(@event) do |f| %>
+    <%= f.fields_for :subscriptions, class: 'row' do |sf| %>
+      <article class="form-group">
+        <div class="row">
+          <div class="col-xs-11">
+            <%= sf.select :contact_id, options_for_select(Contact.all.map { |v| [v.email, v.id] }), {}, { class: 'form-control' } %>
+          </div>
+          <div class="col-xs-1">
+            <%= sf.link_to_remove do %>
+              <%= icon 'remove' %>
+            <% end %>
+          </div>
+        </article>
+      <% end %>
+      <%= f.link_to_add :subscriptions do %>
+        <%= icon 'user-plus' %>
+      <% end %>
 
-</section>
+      <article class="form-group">
+        <%= submit_tag t(:submit), class: 'btn btn-primary' %>
+      </article>
+    <% end %>
+
+  </section>

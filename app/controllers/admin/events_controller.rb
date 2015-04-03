@@ -6,6 +6,7 @@ class Admin::EventsController < Admin::AdminController
 
   def new
     @event = Event.new
+    @event.subscriptions.build
   end
 
   def show
@@ -43,6 +44,11 @@ class Admin::EventsController < Admin::AdminController
     @event.destroy
   end
 
+  def add_subscription
+    throw params
+  end
+
+  private
   def event_params
     params.require(:event).permit(:name, :description, :start_date, :start_time)
   end

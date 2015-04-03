@@ -13,6 +13,8 @@
 //= require jquery
 // require jquery_ujs
 //= require adequate_bootstrap
+//= require jquery_nested_form
+//= require selectize
 //= require_self
 
 $(document).ready(function(){
